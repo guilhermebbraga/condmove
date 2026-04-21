@@ -42,7 +42,7 @@ export default function Footer() {
 
   const quickLinks = [
     {
-      title: "Início",
+      title: "Home",
       link: "/",
     },
     {
@@ -62,7 +62,7 @@ export default function Footer() {
   return (
     <footer
       className="
-        w-full min-h-30 bg-secondary p-10 gap-10 grid justify-items-center"
+        w-full min-h-30 bg-secondary p-10 gap-10 grid justify-items-center relative"
     >
       <div className="w-full grid md:grid-cols-4 gap-10">
         <div className="flex w-full flex-col items-baseline md:col-span-2">
@@ -90,7 +90,7 @@ export default function Footer() {
         </div>
 
         <div className="w-full">
-          <h4 className="font-medium text-lg text-neutral-50">Links Rápidos</h4>
+          <h4 className="font-medium text-lg text-neutral-50">Links Úteis</h4>
 
           <nav className="flex flex-col gap-2 text-neutral-300 mt-1">
             {quickLinks.map((link, index) => (
@@ -122,9 +122,11 @@ export default function Footer() {
 
       <div className="w-full h-px bg-white/10"></div>
 
-      <p className="text-neutral-300 text-center">
-        &copy; 2026 CondMove. Todos os direitos reservados.{" "}
-      </p>
+      <div className="text-center text-neutral-300">
+        <p>&copy; 2026 CondMove. Todos os direitos reservados. </p>
+
+        <Link target="_blank" href='https://cleanstack.com.br/solucoes' className="text-sm cursor-pointer opacity-20 hover:text-cyan-400 hover:opacity-100">Desenvolvido por CleanStack Solutions</Link>
+      </div>
     </footer>
   );
 }

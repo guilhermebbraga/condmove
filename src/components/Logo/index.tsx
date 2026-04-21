@@ -1,17 +1,21 @@
 import { FaCar } from "react-icons/fa";
 
-export default function Logo() {
+interface LogoProps {
+  small?: boolean;
+}
+
+export default function Logo({ small }: LogoProps) {
   return (
     <div className="flex items-end font-medium text-neutral-200 gap-2">
+      <div className={`
+          bg-primary  rounded-md text-secondary grid place-items-center
+          ${small? "w-8 h-8": "w-10 h-10 text-2xl"}`}>
+        <FaCar />
+      </div>
 
-        <div className="bg-primary text-2xl rounded-md text-secondary w-10 h-10 grid place-items-center">
-
-            <FaCar/>
-            
-        </div>
-
-        <p className="text-3xl">Cond<span className="font-bold text-primary">Move</span> </p>
-        
+      <p className={`${small ? "text-xl" : "text-3xl"}`}>
+        Cond<span className="font-bold text-primary">Move</span>{" "}
+      </p>
     </div>
-  )
+  );
 }

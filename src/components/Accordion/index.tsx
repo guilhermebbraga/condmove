@@ -1,6 +1,6 @@
 "use client";
-
-import { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
+import { useEffect, useState } from "react";
 
 type Faq = {
   question: string;
@@ -8,7 +8,15 @@ type Faq = {
 };
 
 export default function Accordion() {
+  const [mounted, setMounted] = useState(false);
   const [openQuestion, setOpenQuestion] = useState<null | number>();
+
+
+  // O useEffect só roda no cliente, após a montagem
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+  }, []);
 
   const questions: Faq[] = [
     {
@@ -30,8 +38,13 @@ export default function Accordion() {
   ];
 
   const handleOpenFaq = (index: number) => {
-    return setOpenQuestion(index === openQuestion ? null : index);
+    setOpenQuestion(index === openQuestion ? null : index);
+    alert("Aberto");
   };
+
+  if (!mounted) {
+    return <div>... </div>; 
+  }
 
   return (
     <ul className="flex flex-col gap-5 ">
@@ -46,7 +59,9 @@ export default function Accordion() {
           <div className="flex items-center justify-between gap-5">
             <h3 className="text-lg font-medium">{question.question}</h3>
 
-            <div>{openQuestion !== index ? "Ver" : "Fechar"}</div>
+            <IoIosArrowDown
+              className={` text-lg ${openQuestion !== index ? "" : "rotate-180"}`}
+            />
           </div>
 
           <div

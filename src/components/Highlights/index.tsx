@@ -4,7 +4,7 @@ import SectionTitle from "../SectionTitle";
 
 export default function Highlights() {
   return (
-    <section className="p-7.5 my-5 flex flex-col">
+    <section id="highlights" className="p-7.5 my-5 flex flex-col">
       
       <SectionTitle title="Por que nos escolher" subtitle="Conforto para o seu dia a dia"/>
 

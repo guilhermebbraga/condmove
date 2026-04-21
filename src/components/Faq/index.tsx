@@ -3,7 +3,7 @@ import SectionTitle from "../SectionTitle";
 
 export default function Faq() {
   return (
-    <section className="p-7.5 my-5 flex min-h-[20vh] flex-col">
+    <section id="faq" className="p-7.5 my-5 flex min-h-[20vh] flex-col">
 
         <SectionTitle title="Tire suas dúvidas" subtitle="FAQ" />
 

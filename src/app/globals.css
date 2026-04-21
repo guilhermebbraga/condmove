@@ -41,6 +41,7 @@
   --color-secondary-hover: var(--secondary-hover);
 
   --radius-custom: var(--radius-custom);
+
 }
 
 @layer base {
@@ -51,4 +52,9 @@
   body {
     @apply bg-bg text-text-main font-poppins;
   }
+
+  .no-overflow {
+    @apply overflow-hidden
+  }
+  
 }

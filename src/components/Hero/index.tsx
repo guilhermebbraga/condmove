@@ -8,11 +8,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-gray-900 overflow-hidden min-h-[60vh] w-full flex flex-col md:flex-row gap-12 md:gap-5 p-7.5"
+      className="relative bg-gray-900 overflow-hidden md:min-h-screen pt-24 pb-12 w-full flex items-center flex-col md:flex-row gap-12 md:gap-0 px-7.5 md:px-12"
     >
       <div className="absolute right-0 h-full w-1/2 bg-primary/20 rounded-full blur-[100px]" />
 
-      <div className="md:w-[60%] flex flex-col gap-5">
+      <div className="md:w-[60%] md:h-[80%] flex flex-col gap-5">
         <h1 className="text-4xl md:text-5xl text-gray-50 font-medium">
           Seu transporte <br />
           <span className="text-primary">
@@ -37,7 +37,7 @@ export default function Hero() {
         
       </div>
 
-      <div className="md:flex-1 flex justify-center">
+      <div className="md:flex-1 md:h-[90%] flex justify-center">
 
         <Smartphone/>
         
