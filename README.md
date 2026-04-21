@@ -1,6 +1,6 @@
 ![Droppe Banner Logo](./public/hero.png "Hero Image")
 
-Landing Page desenvolvida com Next.js, TypeScript e TaiwlindCSS. Com foco em **performance** e **velocidade e experiência de desenvolvimento**.
+Landing Page desenvolvida com Next.js, TypeScript e TaiwlindCSS. Com foco em **performance, velocidade e experiência de desenvolvimento**.
 
 
 ## Visão Geral
